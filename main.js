@@ -309,7 +309,7 @@ const app = {
         repeatBtn.classList.toggle('active', app.isRepeat)
         randomBtn.classList.toggle('active', app.isRandom)
 
-        this.currentIndex = this.config.songIndex
+        this.currentIndex = this.config.songIndex||0
         this.loadCurrentSong()
 
         progress.value = this.config.progress
