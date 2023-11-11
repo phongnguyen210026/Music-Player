@@ -312,11 +312,11 @@ const app = {
         this.currentIndex = this.config.songIndex||0
         this.loadCurrentSong()
 
-        progress.value = this.config.progress
-        audio.currentTime = progress.value/100*this.config.audioDuration
+        progress.value = this.config.progress||0
+        audio.currentTime = progress.value/100*this.config.audioDuration||0
 
         audio.volume = this.config.volume/100 || 1
-        volume.value = this.config.volume
+        volume.value = this.config.volume||100
     },
     start(){
         this.defineProperties() 
